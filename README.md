@@ -47,7 +47,7 @@ python test_correction_loop.py
 
 ## Assignment Requirements
 
-✅ Invoked graph with initial state using `.stream()` method  
-✅ Demonstrated correction loop by forcing reviewer to return issues  
-✅ Graph correctly routes task back to planner when issues found  
-✅ Streaming output shows each step of execution
+- Invoked graph with initial state using `.stream()` method  
+- Demonstrated correction loop by forcing reviewer to return issues  
+- Graph correctly routes task back to planner when issues found  
+- Streaming output shows each step of execution
