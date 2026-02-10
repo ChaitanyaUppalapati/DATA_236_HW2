@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Book Library</h1>
+            <p class="subtitle">Manage your book collection</p>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+
+                <input type="text" id="searchInput" class="search-input"
+                    placeholder="Search books by title or author...">
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn btn-primary" id="showAddFormBtn">
+                Add New Book
+            </button>
+            <button class="btn btn-secondary" id="showUpdateFormBtn">
+                Update Book
+            </button>
+            <button class="btn btn-danger" id="deleteHighestIdBtn">
+                Delete Highest ID
+            </button>
+        </div>
+
+        <!-- Add Book Form -->
+        <div id="addBookForm" class="form-section hidden">
+            <h2>Add New Book</h2>
+            <form id="addForm">
+                <div class="form-group">
+                    <label for="addTitle">Book Title</label>
+                    <input type="text" id="addTitle" required placeholder="Enter book title">
+                </div>
+                <div class="form-group">
+                    <label for="addAuthor">Author Name</label>
+                    <input type="text" id="addAuthor" required placeholder="Enter author name">
+                </div>
+                <div class="action-buttons">
+                    <button type="submit" class="btn btn-primary">
+                        Add Book
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="cancelAddBtn">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Update Book Form -->
+        <div id="updateBookForm" class="form-section hidden">
+            <h2>Update Book</h2>
+            <form id="updateForm">
+                <div class="form-group">
+                    <label for="updateId">Book ID</label>
+                    <input type="number" id="updateId" required placeholder="Enter book ID to update" min="1">
+                </div>
+                <div class="form-group">
+                    <label for="updateTitle">New Book Title</label>
+                    <input type="text" id="updateTitle" required placeholder="Enter new book title">
+                </div>
+                <div class="form-group">
+                    <label for="updateAuthor">New Author Name</label>
+                    <input type="text" id="updateAuthor" required placeholder="Enter new author name">
+                </div>
+                <div class="action-buttons">
+                    <button type="submit" class="btn btn-primary">
+                        Update Book
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="cancelUpdateBtn">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Books Display -->
+        <div id="booksContainer">
+            <div class="books-grid" id="booksGrid">
+                <!-- Books will be dynamically inserted here -->
+            </div>
+            <div id="emptyState" class="empty-state hidden">
+                <div class="empty-state-icon">📖</div>
+                <p>No books found. Add your first book to get started!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
